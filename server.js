@@ -11,7 +11,7 @@ const app=express()
 app.use(morgan('dev'))
 
 // cors middleware
-app.use(cors())
+app.use(cors(corsOptions))
 
 //cookie config
 app.use(cookieParser())
@@ -24,7 +24,7 @@ require("dotenv").config()
 
 
 //connecting to the DB
-mongoose.connect( 'mongodb+srv://ragulNolan:%23Ragul4444@cluster0.6qh9t.mongodb.net/sigmaDocs?retryWrites=true&w=majority',{useNewUrlParser: true,useUnifiedTopology: true})
+mongoose.connect( 'mongodb+srv://ragulNolan:%23Ragul4444@cluster0.6qh9t.mongodb.net/walmart?retryWrites=true&w=majority',{useNewUrlParser: true,useUnifiedTopology: true})
 .then((res)=>{
     app.listen(process.env.PORT ||3232,()=>{
         console.log('walmart converge Server Started listening 🚀🚀🚀🚀 ')

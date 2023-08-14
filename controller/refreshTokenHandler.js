@@ -54,7 +54,7 @@ const refreshTokenHandler=async(req,res)=>{
             res.cookie('refresh_token', newToken.refresh_token, { httpOnly: true, secure:   true,     sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 });
 
             //2) sending the access token in  json format
-            res.json({access_token:newToken.access_token})
+            res.json({access_token:newToken.access_token,role:result.role})
 
         })
 
