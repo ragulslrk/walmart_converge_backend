@@ -29,7 +29,7 @@ const create_orders=async(req,res)=>{
                 "customer": {
                   "name": customer_data.username,
                   "contact":"+916385339037" ,
-                  "email": customer_data.email
+                  "email": "gokulprasath100702@gmail.com"
                 },
                 "notify": {
                   "sms": true,
