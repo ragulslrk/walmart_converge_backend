@@ -45,7 +45,7 @@ const login=async(req,res)=>{
 
                 console.log(securityTokenArray)
 
-                const newToken=tokenHandler.genrateJwt(foundUser.username,foundUser._id)
+                const newToken=tokenHandler.genrateJwt(foundUser.username,foundUser._id,foundUser.role)
                 console.log(newToken)
 
                 foundUser.security_tokens=[...securityTokenArray,newToken]

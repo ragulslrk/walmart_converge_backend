@@ -42,7 +42,7 @@ const refreshTokenHandler=async(req,res)=>{
            }
            if(err || decoded.username!==foundUser.username) return res.sendStatus(403)
 
-           const newToken=tokenHandler.genrateJwt(foundUser.username,foundUser._id)
+           const newToken=tokenHandler.genrateJwt(foundUser.username,foundUser._id,foundUser.role)
             console.log(newToken)
 
             foundUser.security_tokens=[...newRefreshTokenArr,newToken]

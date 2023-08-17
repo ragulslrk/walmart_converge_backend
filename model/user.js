@@ -21,6 +21,9 @@ const user_schema=new mongoose.Schema({
         type:String,
         enum:["customer","admin"]
     },
+    location:{
+        type:String
+    },
     security_tokens:{
         type:[
             {

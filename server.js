@@ -40,7 +40,17 @@ app.use(login)
 const refresh_token=require('./routes/refreshToken')
 app.use(refresh_token)
 
+//route  to  products
+const  products=require('./routes/products')
+app.use(products)
 
+//route to productInsights
+const product_insights=require('./routes/productInsight')
+app.use(product_insights)
+
+//route to orders
+const orders=require("./routes/orders")
+app.use(orders)
 
 //test route to signup
 app.post('/signup',async (req,res)=>{
